@@ -118,7 +118,7 @@ ${BUILD_DIR}/${BIN} : ${OBJ_FILES}
 
 ${BUILD_DIR}/%.o : %.c Makefile
 	-mkdir -p $(@D)
-	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@ -g
 
 .PHONY: clean
 
